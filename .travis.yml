@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "8.6.0"
+deploy:
+  provider: heroku
+  api_key: 3aa2fab8-9992-4675-8fba-5fb54b529c2d
+  app:
+   master: fgffggsf
+   develop: estfdfsad
