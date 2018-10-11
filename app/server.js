@@ -4,6 +4,11 @@ const path = require('path');
 
 const app = express();
 
+const DD = require('node-dogstatsd').StatsD;
+const ddagent = new DD('localhost');
+const DDMiddleware = require('connect-datadog');
+
+app.use(DDMiddleware({dogstatsd: ddagent}));
 // public assets
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));

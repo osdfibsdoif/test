@@ -16,9 +16,11 @@
     "prettier": "prettier --write app/*.js app/__{tests,mocks}__/*.js e2e_tests/*.js"
   },
   "dependencies": {
+    "connect-datadog": "0.0.6",
     "ejs": "~2.5.7",
     "express": "~4.16.2",
     "got": "^8.0.1",
+    "node-dogstatsd": "0.0.7",
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
